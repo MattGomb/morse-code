@@ -58,3 +58,21 @@ MORSE_CODE = {
 def decode_char(char)
   MORSE_CODE[char]
 end
+
+def decode_word(word)
+  word.split.map do |char|
+    decode_char(char)
+  end.join
+end
+
+def decode_str(string)
+  string.split('   ').map do |word|
+    decode_word(word)
+  end.join(' ')
+end
+
+p decode_char('.-')
+
+p decode_word("-- -.--")
+
+p decode_str('-- -.--   -. .- -- .')
