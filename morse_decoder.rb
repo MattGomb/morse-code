@@ -73,6 +73,6 @@ end
 
 p decode_char('.-')
 
-p decode_word("-- -.--")
+p decode_word('-- -.--')
 
 p decode_str('-- -.--   -. .- -- .')
